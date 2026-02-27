@@ -8,7 +8,17 @@ if (glow) {
     }, 4000);
 }
 
+document.addEventListener("click", (e) => {
+    const skillBoxes = document.querySelectorAll("[data-skill]");
 
+    skillBoxes.forEach(box => {
+        if (box.contains(e.target)) {
+            box.classList.toggle("active");
+        } else {
+            box.classList.remove("active");
+        }
+    });
+});
 
 
 //
