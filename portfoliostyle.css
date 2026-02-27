@@ -539,13 +539,12 @@ a {
     color:#00ff9c;
 }
 
-/* ============================================
-   NAVBAR RESPONSIVE / HAMBURGER
-   ============================================ */
+/* NAVBAR RESPONSIVE / HAMBURGER */
 
 .nav-logo {
   font-weight: 600;
   color: var(--green-dark);
+  
 }
 
 /* Liens desktop */
