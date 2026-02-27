@@ -543,7 +543,7 @@ footer {
     transition: 0.3s ease;
 }
 
-.timeline-card h3 {
+.timeline-card h2 {
     color: #00ff9c;
     margin-bottom: 10px;
 }

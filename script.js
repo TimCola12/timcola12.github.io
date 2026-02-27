@@ -1,6 +1,26 @@
 // Script pour l'anim fond de page //
 
 const glow = document.querySelector(".glow");
+document.addEventListener("DOMContentLoaded", () => {
+
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  if (!hamburger || !navLinks) return;
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      hamburger.classList.remove("active");
+    });
+  });
+
+});
 
 if (glow) {
     setInterval(() => {
@@ -19,7 +39,6 @@ document.addEventListener("click", (e) => {
         }
     });
 });
-
 
 //
 document.addEventListener("DOMContentLoaded", () => {

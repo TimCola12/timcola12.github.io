@@ -162,13 +162,17 @@ header p {
   position: sticky;
   top: 0;
   z-index: 20;
+
   display: flex;
   justify-content: center;
   gap: 40px;
   padding: 20px;
+
   background: rgba(5, 8, 20, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-glow);
+
+  position: relative;
 }
 
 .nav_web_perso a {
@@ -535,123 +539,78 @@ a {
     color:#00ff9c;
 }
 
-/* RESPONSIVE PORTFOLIO */
+/* ============================================
+   NAVBAR RESPONSIVE / HAMBURGER
+   ============================================ */
 
-/*  GRAND ÉCRAN (≥ 1440px)  */
-@media (min-width: 1440px) {
-
-  .hero-content {
-    max-width: 1100px;
-  }
-
-  section {
-    padding: 120px 12%;
-  }
-
-  .cards {
-    gap: 3rem;
-  }
+.nav-logo {
+  font-weight: 600;
+  color: var(--green-dark);
 }
 
-/* ÉCRAN NORMAL (1024px – 1439px)  */
-@media (max-width: 1439px) {
-
-  section {
-    padding: 100px 8%;
-  }
-
-  .hero-content h1 {
-    font-size: 3.2rem;
-  }
+/* Liens desktop */
+.nav-links {
+  display: flex;
+  gap: 40px;
 }
 
-/* TABLETTE (≤ 1024px)  */
+/* Hamburger (caché par défaut) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 2px;
+  background: var(--green-dark);
+  margin: 5px 0;
+  transition: 0.3s ease;
+}
+
+/* ===== TABLETTE & MOBILE ===== */
 @media (max-width: 1024px) {
 
-  /* HERO */
-  .hero-banner {
-    height: 85vh;
-  }
-
-  .hero-content {
-    max-width: 720px;
-  }
-
-  /* NAV */
   .nav_web_perso {
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 16px;
+    justify-content: space-between;
   }
 
-  .nav_web_perso a {
-    font-size: 0.95rem;
-  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
 
-  /* CARTES */
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* MOBILE (≤ 768px) */
-@media (max-width: 768px) {
-
-  /* SECTIONS */
-  section {
-    padding: 70px 20px;
-  }
-
-  /* HERO */
-  .hero-banner {
-    height: 70vh;
-    background-position: center top;
-  }
-
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  /* NAV */
-  .nav_web_perso {
-    gap: 12px;
-    padding: 14px;
-  }
-
-  .nav_web_perso a {
-    font-size: 0.9rem;
-  }
-
-  /* CARTES */
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* PETIT MOBILE (≤ 480px) */
-@media (max-width: 480px) {
-
-  /* HERO */
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 0.95rem;
-  }
-
-  /* NAV */
-  .nav_web_perso {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
+
+    background: rgba(5,8,20,0.95);
+    backdrop-filter: blur(12px);
+    padding: 30px 0;
+
+    display: none;
   }
 
-  /* CARTES */
-  .card {
-    padding: 1.5rem;
+  .nav-links.active {
+    display: flex;
   }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Animation hamburger -> croix */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
 }
