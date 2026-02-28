@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 :root {
   --green-dark: #00ff9c;
   --green-bg: #02110a;
@@ -41,7 +43,7 @@ body::before {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url("Photo_Tim.jfif") center center / cover no-repeat;
+  background: url("/ressources/Photo_Tim.jfif") center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,60 +161,30 @@ header p {
 
 /* NAV PRINCIPALE */
 .nav_web_perso {
-  position: sticky;
-  top: 0;
-  z-index: 20;
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background: rgba(5, 8, 20, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-glow);
 
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px;
-
-  background: rgba(5, 8, 20, 0.9);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-glow);
-
-  position: relative;
-}
+  }
 
 .nav_web_perso a {
-  text-decoration: none;
-  color: var(--text-main);
-  font-weight: 500;
-  position: relative;
+   max-width: 700px;
+   text-decoration: none;
+   color: var(--text-main);
+   font-weight: 500;
+   position: relative;
 }
 
-.nav_web_perso a::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--green-dark);
-  transition: 0.3s;
+.nav a:hover {
+  color: #00ff9c;
+
 }
 
-.nav_web_perso a:hover::after {
-  width: 100%;
-}
-
-/* NAV INTERNE */
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-  padding: 2rem;
-  background: rgba(5,8,20,0.6);
-  border-top: 1px solid var(--border-glow);
-  border-bottom: 1px solid var(--border-glow);
-}
-
-nav ul a {
-  text-decoration: none;
-  color: var(--text-main);
-}
 
 /* SECTIONS */
 section {
@@ -541,11 +513,6 @@ a {
 
 /* NAVBAR RESPONSIVE / HAMBURGER */
 
-.nav-logo {
-  font-weight: 600;
-  color: var(--green-dark);
-  
-}
 
 /* Liens desktop */
 .nav-links {
