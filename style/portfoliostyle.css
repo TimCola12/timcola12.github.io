@@ -43,7 +43,7 @@ body::before {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url("/ressources/Photo_Tim.jfif") center center / cover no-repeat;
+  background: url("photo_tim.jfif") center center / cover no-repeat;  
   display: flex;
   align-items: center;
   justify-content: center;
