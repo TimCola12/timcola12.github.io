@@ -161,17 +161,19 @@ header p {
 
 /* NAV PRINCIPALE */
 .nav_web_perso {
-    display: flex;
-    position: sticky;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px;
-    background: rgba(5, 8, 20, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-glow);
+  position: sticky;
+  top: 0;
+  z-index: 20;
 
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  padding: 20px;
+  background: rgba(5, 8, 20, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-glow);
+}
 .nav_web_perso a {
    max-width: 700px;
    text-decoration: none;
@@ -518,6 +520,7 @@ a {
 .nav-links {
   display: flex;
   gap: 40px;
+  margin: 0 auto; 
 }
 
 /* Hamburger (caché par défaut) */
@@ -564,7 +567,8 @@ a {
   }
 
   .hamburger {
-    display: flex;
+    display:flex;
+    margin-left:auto;
   }
 }
 
