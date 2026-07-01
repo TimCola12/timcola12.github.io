@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 * {
     margin: 0;
@@ -117,6 +117,14 @@ body {
     max-width: 500px;
 }
 
+.card p {
+    max-width: 100%; /* ne dépasse pas la largeur de la carte */
+    word-wrap: break-word; /* coupe les mots trop longs */
+    overflow-wrap: break-word; /* alternative moderne */
+    white-space: normal; /* permet le retour à la ligne */
+    text-overflow: ellipsis; /* ajoute "..." si coupé (nécessite overflow hidden) */
+}
+
 .btn-portfolio {
     display: inline-block;
     margin-top: 20px;
@@ -150,6 +158,7 @@ body {
     border: 1px solid rgba(0,255,156,0.3);
     background: rgba(10,20,30,0.6);
     border-radius: 12px;
+    overflow: hidden;
     transition: 0.3s;
 }
 
